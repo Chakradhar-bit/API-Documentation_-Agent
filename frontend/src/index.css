@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ *
+ * Theme tokens — LIGHT (default).
+ * Warm, matte, light. No pure white; charcoal ink; muted blue accent.
+ * ------------------------------------------------------------------ */
+:root {
+  --c-canvas: 246 246 244;
+  --c-surface: 253 253 252;
+  --c-ink: 42 50 64;
+  --c-ink-soft: 90 99 113;
+  --c-ink-mute: 139 147 160;
+  --c-gray-50: 248 248 246;
+  --c-gray-100: 242 242 239;
+  --c-gray-200: 231 231 227;
+  --c-gray-300: 216 216 211;
+  --c-gray-400: 160 160 153;
+  --c-gray-500: 126 126 120;
+  --c-gray-600: 97 97 92;
+  --c-gray-700: 76 76 72;
+  --c-gray-800: 52 52 49;
+  --c-gray-900: 35 35 34;
+  --c-blue-50: 238 242 247;
+  --c-blue-100: 225 232 241;
+  --c-blue-200: 199 212 228;
+  --c-blue-300: 169 187 211;
+  --c-blue-400: 124 144 180;
+  --c-blue-500: 95 119 153;
+  --c-blue-600: 76 102 144;
+  --c-blue-700: 62 84 120;
+  --c-blue-800: 54 72 100;
+  --c-blue-900: 46 62 85;
+  --c-emerald-50: 241 245 242;
+  --c-emerald-100: 228 237 231;
+  --c-emerald-200: 202 221 208;
+  --c-emerald-500: 110 154 125;
+  --c-emerald-600: 88 129 104;
+  --c-emerald-700: 73 107 86;
+  --c-amber-50: 248 244 234;
+  --c-amber-100: 241 233 214;
+  --c-amber-200: 228 213 180;
+  --c-amber-500: 192 160 95;
+  --c-amber-600: 165 133 63;
+  --c-amber-700: 135 108 51;
+  --c-amber-800: 113 89 42;
+  --c-red-50: 249 241 241;
+  --c-red-100: 242 226 226;
+  --c-red-200: 230 202 202;
+  --c-red-400: 196 139 139;
+  --c-red-500: 178 101 101;
+  --c-red-600: 162 82 82;
+  --c-red-700: 134 69 69;
+  --c-red-800: 111 57 57;
+  --c-violet-50: 244 242 248;
+  --c-violet-100: 234 230 242;
+  --c-violet-200: 216 208 230;
+  --c-violet-700: 108 94 142;
+  --shadow-card: 0 4px 20px rgba(30, 40, 60, 0.06);
+  --shadow-card-hover: 0 8px 28px rgba(30, 40, 60, 0.1);
+  --shadow-panel: 0 1px 2px rgba(30, 40, 60, 0.04);
+  --shadow-btn: 0 1px 2px rgba(30, 40, 60, 0.1);
+  --shadow-btn-hover: 0 4px 14px rgba(30, 40, 60, 0.14);
+  --scrollbar-thumb: #d4d6d2;
+  color-scheme: light;
+}
+
+/* ------------------------------------------------------------------ *
+ * Theme tokens — DARK.
+ * Matte charcoal/slate (never pure black), off-white ink, the same
+ * muted professional blue accent. Calm and low-contrast by design.
+ * ------------------------------------------------------------------ */
+.dark {
+  --c-canvas: 27 30 36;
+  --c-surface: 35 39 47;
+  --c-ink: 232 235 240;
+  --c-ink-soft: 176 183 194;
+  --c-ink-mute: 148 157 170;
+  --c-gray-50: 42 46 55;
+  --c-gray-100: 49 54 64;
+  --c-gray-200: 60 66 78;
+  --c-gray-300: 76 83 97;
+  --c-gray-400: 108 116 131;
+  --c-gray-500: 139 148 162;
+  --c-gray-600: 164 172 185;
+  --c-gray-700: 190 197 208;
+  --c-gray-800: 214 219 227;
+  --c-gray-900: 234 237 242;
+  --c-blue-50: 38 47 66;
+  --c-blue-100: 44 55 78;
+  --c-blue-200: 63 79 110;
+  --c-blue-300: 84 104 141;
+  --c-blue-400: 104 128 168;
+  --c-blue-500: 122 148 189;
+  --c-blue-600: 71 100 152;
+  --c-blue-700: 96 128 181;
+  --c-blue-800: 148 174 214;
+  --c-blue-900: 178 199 229;
+  --c-emerald-50: 32 44 38;
+  --c-emerald-100: 39 54 46;
+  --c-emerald-200: 58 80 66;
+  --c-emerald-500: 124 176 140;
+  --c-emerald-600: 138 190 154;
+  --c-emerald-700: 160 205 174;
+  --c-amber-50: 46 40 30;
+  --c-amber-100: 56 49 37;
+  --c-amber-200: 84 73 54;
+  --c-amber-500: 202 172 106;
+  --c-amber-600: 214 184 122;
+  --c-amber-700: 224 199 146;
+  --c-amber-800: 231 211 167;
+  --c-red-50: 48 36 38;
+  --c-red-100: 58 44 46;
+  --c-red-200: 86 64 67;
+  --c-red-400: 200 132 132;
+  --c-red-500: 212 150 150;
+  --c-red-600: 222 166 166;
+  --c-red-700: 230 182 182;
+  --c-red-800: 237 197 197;
+  --c-violet-50: 42 39 52;
+  --c-violet-100: 52 48 64;
+  --c-violet-200: 76 70 94;
+  --c-violet-700: 176 164 208;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.32);
+  --shadow-card-hover: 0 8px 28px rgba(0, 0, 0, 0.45);
+  --shadow-panel: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-btn: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-btn-hover: 0 4px 14px rgba(0, 0, 0, 0.5);
+  --scrollbar-thumb: #3a4150;
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-canvas text-ink antialiased;
+  font-feature-settings: "cv02", "cv03", "cv04";
+}
+
+::selection {
+  @apply bg-blue-200 text-blue-900;
+}
+
+:focus-visible {
+  @apply outline-none ring-2 ring-blue-200 ring-offset-1 ring-offset-canvas;
+}
+
+/*
+ * Smooth theme switch: color transitions are enabled ONLY while the
+ * toggle is in flight (html.theme-anim), so normal interactions never
+ * animate and the layout itself never moves.
+ */
+html.theme-anim,
+html.theme-anim *,
+html.theme-anim *::before,
+html.theme-anim *::after {
+  transition:
+    background-color 250ms ease,
+    border-color 250ms ease,
+    color 250ms ease,
+    fill 250ms ease,
+    stroke 250ms ease,
+    box-shadow 250ms ease,
+    outline-color 250ms ease !important;
+}
+
+/* Subtle, matte scrollbars (theme-aware) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Respect users who prefer reduced motion — the app stays fully usable. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+

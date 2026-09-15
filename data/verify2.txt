@@ -1,0 +1,8 @@
+﻿RENAME: id=84 GET /users/{user_id} sev=BREAKING
+  before={"field":"name","type":"string","model":"UserResponse"}
+  after={"field":"full_name","type":"string","model":"UserResponse"}
+  affected=8: CHANGES.md, main.py, models.py, system.py, users.py, frontend/UserProfile.tsx, services/UserService.ts, tests/test_users.py
+  explanation: The response field 'name' of GET /users/{user_id} was renamed to 'full_name'. Existing clients expecting 'name' may fail and should be updated before deployment.
+OPENAPI: 3.0.3 title=API â Generated API v=1.0.0 paths=16 schemas=11
+VALIDATE: valid=True errors=0
+SNAPSHOTS=2: v2(#6):24ep, v1(#5):24ep

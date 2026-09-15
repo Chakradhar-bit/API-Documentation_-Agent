@@ -1,0 +1,14 @@
+﻿DEMO: endpoints=24 changes=5 breaking=2
+DEMO_MSG: 24 endpoints scanned, 5 changes detected
+CHANGES_TOTAL=29
+  SAFE=26
+  BREAKING=2
+  WARNING=1
+BREAKING_SAMPLE: id=86 GET /users/{user_id}/orders type=removed_endpoint
+  desc: Endpoint GET /users/{user_id}/orders was removed â existing clients will receive errors
+  before={"method":"GET","path":"/users/{user_id}/orders","summary":"List orders belonging to a user.","description":"List orders belonging to a user.","params":[{"name":"user_id","in":"path","type":"integer","required":true},{"name":"status","in":"query","type":"string","required":false}],"request_schema":null,"response_schema":null,"response_model":null,"body_model":null,"status_codes":[200],"auth":null,"source_file":"users.py"}
+  after=
+  affected=1 files
+  ai_source=deterministic
+  explanation: The endpoint GET /users/{user_id}/orders was removed. Any client still calling it will receive errors once this version is deployed.
+  recommendation: Confirm no production traffic uses this endpoint, then remove client calls and publish the deprecation date.

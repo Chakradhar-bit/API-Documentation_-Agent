@@ -1,0 +1,160 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: [
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+        mono: [
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Consolas",
+          "Liberation Mono",
+          "monospace",
+        ],
+      },
+      // Every semantic color is a CSS variable so the whole theme switches
+      // by toggling the `dark` class on <html> — no component changes needed.
+      colors: {
+        canvas: "rgb(var(--c-canvas) / <alpha-value>)",
+        surface: "rgb(var(--c-surface) / <alpha-value>)",
+        ink: {
+          DEFAULT: "rgb(var(--c-ink) / <alpha-value>)",
+          soft: "rgb(var(--c-ink-soft) / <alpha-value>)",
+          mute: "rgb(var(--c-ink-mute) / <alpha-value>)",
+        },
+        gray: {
+          50: "rgb(var(--c-gray-50) / <alpha-value>)",
+          100: "rgb(var(--c-gray-100) / <alpha-value>)",
+          200: "rgb(var(--c-gray-200) / <alpha-value>)",
+          300: "rgb(var(--c-gray-300) / <alpha-value>)",
+          400: "rgb(var(--c-gray-400) / <alpha-value>)",
+          500: "rgb(var(--c-gray-500) / <alpha-value>)",
+          600: "rgb(var(--c-gray-600) / <alpha-value>)",
+          700: "rgb(var(--c-gray-700) / <alpha-value>)",
+          800: "rgb(var(--c-gray-800) / <alpha-value>)",
+          900: "rgb(var(--c-gray-900) / <alpha-value>)",
+        },
+        blue: {
+          50: "rgb(var(--c-blue-50) / <alpha-value>)",
+          100: "rgb(var(--c-blue-100) / <alpha-value>)",
+          200: "rgb(var(--c-blue-200) / <alpha-value>)",
+          300: "rgb(var(--c-blue-300) / <alpha-value>)",
+          400: "rgb(var(--c-blue-400) / <alpha-value>)",
+          500: "rgb(var(--c-blue-500) / <alpha-value>)",
+          600: "rgb(var(--c-blue-600) / <alpha-value>)",
+          700: "rgb(var(--c-blue-700) / <alpha-value>)",
+          800: "rgb(var(--c-blue-800) / <alpha-value>)",
+          900: "rgb(var(--c-blue-900) / <alpha-value>)",
+        },
+        emerald: {
+          50: "rgb(var(--c-emerald-50) / <alpha-value>)",
+          100: "rgb(var(--c-emerald-100) / <alpha-value>)",
+          200: "rgb(var(--c-emerald-200) / <alpha-value>)",
+          500: "rgb(var(--c-emerald-500) / <alpha-value>)",
+          600: "rgb(var(--c-emerald-600) / <alpha-value>)",
+          700: "rgb(var(--c-emerald-700) / <alpha-value>)",
+        },
+        amber: {
+          50: "rgb(var(--c-amber-50) / <alpha-value>)",
+          100: "rgb(var(--c-amber-100) / <alpha-value>)",
+          200: "rgb(var(--c-amber-200) / <alpha-value>)",
+          500: "rgb(var(--c-amber-500) / <alpha-value>)",
+          600: "rgb(var(--c-amber-600) / <alpha-value>)",
+          700: "rgb(var(--c-amber-700) / <alpha-value>)",
+          800: "rgb(var(--c-amber-800) / <alpha-value>)",
+        },
+        red: {
+          50: "rgb(var(--c-red-50) / <alpha-value>)",
+          100: "rgb(var(--c-red-100) / <alpha-value>)",
+          200: "rgb(var(--c-red-200) / <alpha-value>)",
+          400: "rgb(var(--c-red-400) / <alpha-value>)",
+          500: "rgb(var(--c-red-500) / <alpha-value>)",
+          600: "rgb(var(--c-red-600) / <alpha-value>)",
+          700: "rgb(var(--c-red-700) / <alpha-value>)",
+          800: "rgb(var(--c-red-800) / <alpha-value>)",
+        },
+        violet: {
+          50: "rgb(var(--c-violet-50) / <alpha-value>)",
+          100: "rgb(var(--c-violet-100) / <alpha-value>)",
+          200: "rgb(var(--c-violet-200) / <alpha-value>)",
+          700: "rgb(var(--c-violet-700) / <alpha-value>)",
+        },
+      },
+      borderRadius: {
+        xl: "0.875rem",
+        "2xl": "1rem",
+      },
+      boxShadow: {
+        card: "var(--shadow-card)",
+        "card-hover": "var(--shadow-card-hover)",
+        panel: "var(--shadow-panel)",
+        btn: "var(--shadow-btn)",
+        "btn-hover": "var(--shadow-btn-hover)",
+      },
+      keyframes: {
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "rise-in": {
+          "0%": { opacity: "0", transform: "translateY(8px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "fade-out": {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+        "panel-in": {
+          "0%": { opacity: "0", transform: "translateY(6px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "splash-icon": {
+          "0%": { opacity: "0", transform: "translateY(8px) scale(0.95)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
+        "splash-text": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "splash-bar": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "load-bar": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(320%)" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "rise-in": "rise-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "fade-in": "fade-in 0.45s ease-out both",
+        "fade-out": "fade-out 0.35s ease-in both",
+        "panel-in": "panel-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "splash-icon": "splash-icon 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both",
+        "splash-title": "splash-text 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both",
+        "splash-sub": "splash-text 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both",
+        "splash-bar": "splash-bar 0.4s ease-out 0.7s both",
+        "load-bar": "load-bar 1.2s ease-in-out infinite",
+      },
+    },
+  },
+  plugins: [],
+};

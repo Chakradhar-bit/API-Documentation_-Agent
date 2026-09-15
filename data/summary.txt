@@ -1,0 +1,1 @@
+﻿New endpoint GET /users/{user_id}/preferences added
